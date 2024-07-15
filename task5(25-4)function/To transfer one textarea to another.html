@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To transfer one textarea to another</title>
+</head>
+
+<body>
+    local Address :
+    <br>
+    <textarea name="local" cols="30" rows="10" id="local"></textarea>
+    <br>
+    <input type="checkbox" id="mycheck" onclick="getadd()">
+    <br>
+    Permanent Address :
+    <br>
+    <textarea name="Permanent" cols="30" rows="10" id="permant"></textarea>
+
+    <!-- javascript -->
+
+    <script>
+        function getadd() {
+            let check = document.getElementById("mycheck")
+            let a = document.getElementById("local").value
+            if (check.checked == true) {
+                document.getElementById('permant').value = a
+            }
+            else {
+                document.getElementById("permant").value = ""
+            }
+        }
+    </script>
+</body>
+
+</html>

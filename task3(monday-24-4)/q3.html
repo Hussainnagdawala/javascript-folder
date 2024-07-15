@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>annual salary</title>
+</head>
+<body>
+    Salary : <input type="text" id="nm">
+    <button onclick="getValue()">Click</button>
+    annual salary: <input type="text" id="nm2">
+    <p ></p>
+
+    <script>
+        function getValue(){
+            let ele = document.getElementById("nm").value;
+            document.getElementById("nm2").value = ele*12 
+            // document.getElementById("nm").value=""
+        }
+    </script>
+</body>
+</html>

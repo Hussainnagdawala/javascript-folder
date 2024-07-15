@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sgin up</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="media.css" />
+  </head>
+
+  <body>
+    <section id="navigation">
+      <nav class="navbar-nav">
+        <a href="#"><img src="image/logo.png" alt="" class="navbar-brand" /></a>
+        <input type="checkbox" id="check" />
+        <span class="material-symbols-outlined checkbtn"> menu </span>
+
+        <div class="collapse">
+          <ul class="navbar margin-left-auto">
+            <li>
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">Shop</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">Pages</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#"> Categories </a>
+            </li>
+            <li class="">
+              <a class="nav-link login" href="#">Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+
+    <!-- Sign up form -->
+    <section id="signupForm">
+      <div class="main-container">
+        <div class="wrapper pt-5 pb-5 ptb-2">
+          <div class="width-manage">
+            <div class="form-box">
+              <div class="signup-image">
+                <div class="img-box-sign">
+                  <h2>BookShelf</h2>
+                  <p>
+                    A central hub where team can work, plan,<br />
+                    and achieve amazing thing together.
+                  </p>
+                  <img src="image/signup.png" alt="" class="img-fluid" />
+                </div>
+              </div>
+              <div class="form-part">
+                <div class="inner-content-form">
+                  <p class="fw-6">START FOR FREE</p>
+                  <h2>SignUp To Bookshelf</h2>
+                  <p class="pb-1">
+                    Already a member ?
+                    <a href="login.html" class="color-chilli">Login</a>
+                  </p>
+                  <form method="post" onsubmit="signup(event)" name="frm">
+                    <div class="gap">
+                      <label for="name">Full Name</label>
+                      <input
+                        type="name"
+                        name="name"
+                        id="name"
+                        placeholder="Admin"
+                      />
+                    </div>
+                    <div class="gap">
+                      <label for="name">Email</label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Admin@gmail.com"
+                        required
+                      />
+                    </div>
+                    <div class="gap">
+                      <label for="name">Password</label>
+                      <input
+                        type="password"
+                        name="pwd"
+                        id="pwd"
+                        placeholder="6+character,1 capital letter"
+                        required
+                      />
+                    </div>
+                    <div class="gap">
+                      <button
+                        type="submit"
+                        value="Signup"
+                        class="signup-button"
+                      >
+                        SignUp
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="social-icon" class="bg-primary">
+      <div class="main-container">
+        <div class="wrapper p-tb-1">
+          <div class="social-content">
+            <div class="social-text">
+              <p>Get connected with uis on social networks :</p>
+            </div>
+            <div class="social-symbols">
+              <a href="">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-google"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="footer">
+      <div class="main-container">
+        <div class="wrapper">
+          <div class="footer-main pt-5 pb-4">
+            <div class="logo-section">
+              <div class="logo-section_inner">
+                <img src="image/logo.white.png" alt="" class="footer_logo" />
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Veritatis, ea facere. Quae, hic! Nemo repellendus impedit
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                  eaque tempora
+                </p>
+              </div>
+            </div>
+            <div class="footer_category">
+              <div class="footer_category_inner">
+                <div class="footer_subhead">
+                  <h5>Category</h5>
+                </div>
+                <ul>
+                  <li>
+                    <a href="">Arts & Photography</a>
+                  </li>
+                  <li>
+                    <a href="">Food & Drink</a>
+                  </li>
+                  <li>
+                    <a href="">Romance</a>
+                  </li>
+                  <li>
+                    <a href="">Health</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer_useful_link">
+              <div class="footer_useful_link_inner">
+                <div class="footer_subhead">
+                  <h5>Useful Links</h5>
+                </div>
+                <ul>
+                  <li>
+                    <a href="">Your Account</a>
+                  </li>
+                  <li>
+                    <a href="">Become a Dealer</a>
+                  </li>
+                  <li>
+                    <a href="">Shipping Rate</a>
+                  </li>
+                  <li>
+                    <a href="">Help</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer_contact">
+              <div class="footer_contact_inner">
+                <div class="footer_subhead">
+                  <h5>Contact</h5>
+                </div>
+                <ul>
+                  <li class="location">
+                    <a href="">New York, NY 10012, US</a>
+                  </li>
+                  <li class="email">
+                    <a href="">Bookshelf@gmail.com</a>
+                  </li>
+                  <li class="Phonenumber">
+                    <a href="">+85 576 986 234</a>
+                  </li>
+                  <li class="faxnumber">
+                    <a href="">+85 576 986 234</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="main-container"> -->
+      <div class="copy_right pt-1 pb-1">
+        <p>2023 Copyright.Bookshelf.All rights reserved</p>
+      </div>
+      <!-- </div> -->
+    </section>
+    <script>
+      function signup(e) {
+        e.preventDefault();
+        let uname = document.getElementById("name").value;
+        let uemail = document.getElementById("email").value;
+        let upwd = document.getElementById("pwd").value;
+
+        let data = localStorage.getItem("ebook_users");
+        if (data != null) {
+          arr = JSON.parse(data);
+        } else {
+          arr = [];
+        }
+        // email check
+        let emailchk = arr.filter((items, index) => {
+          return items.email == uemail;
+        });
+
+        if (emailchk.length > 0) {
+          alert("Email already Exist");
+        } else {
+          arr.push({
+            name: uname,
+            email: uemail,
+            password: upwd,
+            status: "user",
+            login_status: 0,
+          });
+          localStorage.setItem("ebook_users", JSON.stringify(arr));
+          window.location = "login.html";
+        }
+        frm.reset();
+      }
+    </script>
+  </body>
+</html>

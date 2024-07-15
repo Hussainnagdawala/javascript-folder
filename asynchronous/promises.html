@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = new Promise((resolve, reject) => {
+            let name = "admin";
+            if (name == "admiasdan") {
+                resolve();
+            }
+            else {
+                reject();
+            }
+        });
+        console.log(x); // pending
+        x.then(() => {
+            console.log("Success");
+        }).catch(() => {
+            console.log("request is reject");
+        });
+        console.log("I am always execute"); ///
+
+
+    </script>
+</body>
+
+</html>

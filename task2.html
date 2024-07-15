@@ -1,0 +1,89 @@
+<script>
+    // !-- Q1. Wap to find the given number is even or odd 
+
+    let a = prompt("enter Number :")
+    if (a%2==0) {
+        console.log(`${a}, is an even number.`)
+    }
+    else{
+        console.log(`${a}, is an odd number.`)
+    }
+
+
+    // Q2. Wap to find the age is above 18 or not 
+
+    let age = prompt("Enter your age :")
+    if( age>= 18){
+        console.log(`your age is equal to or above 18`)
+    }
+    else if( age>=0){
+        console.log(`your age is under 18`)
+    }
+    else{
+        console.log(`invalid age`)
+    }
+
+
+    // Q3. Wap to check the greatest number between 3 numbers 
+    // a = 10
+    // b = 20 
+    // c = 30
+
+      let num1 = prompt("Enter your 1st number ")
+      let num2 = prompt("Enter your 2nd number ")
+      let num3 = prompt("Enter your 3rd number ")
+      console.log(num1, num2, num3)
+      if (num1 > num2 && num1 > num3) {
+          console.log(`${num1}, is the greatest number`)
+      }
+      else if (num2 > num1 && num2 > num3) {
+              console.log(`${num2}, is the greatest number`)
+          }
+     
+      else {
+          console.log(`${num3}, is the greatest number`)
+      }
+
+
+
+
+
+    // Q4. Wap to find the number is positive , negative
+
+
+        let number = prompt(`Enter your number` )
+        if (number>=0){
+            console.log(`${number}, is a positive number`)
+        }
+        else{
+            console.log(`${number}, is a negative number`)
+        }
+    
+
+
+
+    // 5. swapping without third variable 
+
+
+    let x = prompt(`enter your 1st number `);
+    let y = prompt(`enter your 2nd number `);
+    [x, y] = [y, x];
+    console.log(`The value of a after swapping: ${x}`);
+    console.log(`The value of a after swapping: ${y}`);
+
+
+// 6. cno and opt program using ternary operator 
+// => do not use multiple ternary operator 
+// => do not define the multiple condition at a time 
+
+
+    let cno = prompt(`enter your cno`);
+    let cnumber= ((cno=="1234567890") ? ( (let otp = prompt("enter otp")) (otp=="100") ? "valid otp" : "invalid otp" ) : "invalid cno")
+    console.log(cnumber)
+
+
+
+
+
+
+</script>

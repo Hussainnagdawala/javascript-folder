@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chng image</title>
+</head>
+<style>
+    img {
+        width: 700px;
+        height: 500px;
+    }
+</style>
+
+<body>
+    <div id="div1">
+        <img src="blog3(1main).jpg" alt="" >
+    </div>
+    <button id="chk" onclick="transfer()">click me</button>
+    <div id="div2">
+
+    </div>
+
+    <script>
+        function transfer() {
+           let a = document.getElementById("div1").innerHTML
+            document.getElementById("div2").innerHTML = a
+
+        }
+    </script>
+</body>
+
+</html>

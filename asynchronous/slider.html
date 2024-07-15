@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider
+    </title>
+</head>
+<style>
+    #slider {
+        width: 1500px;
+        height: 700px;
+        border: 2px solid;
+    }
+
+    img {
+        width: 1500px;
+        height: 700px;
+        
+    }
+</style>
+
+<body>
+    <div id="slider">
+
+    </div>
+    <script>
+        let arr = ["blog.jpg", "blog2.jpg", "blog3.jpg"]
+        let i = 0
+        setInterval(() => {
+            if (i > arr.length-1) {
+                i = 0
+            }
+            else {
+                document.getElementById("slider").innerHTML = `<img src='${arr[i]}'/>`;
+                i =i + 1;
+            }
+        }, 1000)
+        // let arr = []
+        // // let pre =[blog.jpg]
+        // // console.log(pre)
+        // let newimg = new Image(1500, 700)
+        // let newimg1 = new Image(1500, 700)
+        // let newimg2 = new Image(1500, 700)
+        // newimg.src = "blog.jpg"
+        // newimg1.src = "blog2.jpg"
+        // newimg2.src = "blog3.jpg"
+        // arr.push(newimg, newimg1, newimg2)
+        // console.log(
+        //     arr
+        // )
+        // // document.getElementById("slider").innerHTML = arr
+        // // Append an <img> element to the <body> tag
+        // // document.body.appendChild(arr[0]);
+        // // document.body.appendChild(arr[1]);
+        // // document.body.appendChild(arr[2]);
+
+        // // // Insert an <img> element as the inner HTML of div#image-01
+        // //  document.querySelector("div#image-01").appendChild(arr[0]);
+        // //  document.querySelector("div#image-02").appendChild(arr[1]);
+        // //  document.querySelector("div#image-03").appendChild(arr[2]);
+        // let newarr =''
+        // arr.forEach((items, index) => {
+        //     setTimeout(() => {
+        //         newarr = document.body.appendChild(arr[0]);
+        //         document.querySelector("div#image-01").appendChild(arr[0]);
+        //         console.log(newarr)
+        //     },2000)
+        //     })
+    </script>
+</body>
+
+</html>

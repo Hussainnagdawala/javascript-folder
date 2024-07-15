@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add books</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="user,dashboard.css">
+
+</head>
+
+<body>
+    <section id="user_dash_nav">
+        <div class="user_dashboard bg-clr-pink">
+            <div class="row ">
+                <div class="col-sm-2 bg-clr-white pt-4 pb-4 pl-4 ">
+                    <div class="position-fixed">
+                        <div class="text-center">
+                            <img src="/image/logo.png" alt="" class="user_logo ">
+                        </div>
+                        <div class="profile text-center pt-5">
+                            <img src="/image/admin.jpg" alt="" class="admin_img">
+                            <div class="profile_Content_user pt-2">
+                                <h3>Jhon David</h3>
+                                <p>david@gmail.com</p>
+                            </div>
+                        </div>
+                        <nav class="navbar navbar-expand-lg pt-5">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link pl-3 pt-2 pb-3" href="user.dashboard.html"> <span
+                                                class="material-symbols-outlined user_dash_icon_style">
+                                                home
+                                            </span> Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle pl-3 pt-2 pb-3" href="#" id="navbarDropdown"
+                                            role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <span class="material-symbols-outlined">
+                                                menu_book
+                                            </span> Books
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="manage_book.html">Manage Books</a>
+                                            <a class="dropdown-item" href="#">Add books</a>
+                                            <!-- <div class="dropdown-divider"></div> -->
+                                            <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled pl-3 pt-2 pb-3" href="#"> <span
+                                                class="material-symbols-outlined">
+                                                settings
+                                            </span> Disabled</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-sm-8 bg-clr-white main_sec_books border_left pl-0 pr-0">
+                    <div class="d-flex justify-content-between pt-4 pb-4 pl-5 pr-4">
+                        <div>
+                            <h5>Hello, Jhon</h5>
+                            <p class="today_detail">Today is monday, 20 june 2023</p>
+                        </div>
+                        <form class="form-inline">
+                            <input class="form-control mr-sm-2 user_dash_search" type="search" placeholder="Search"
+                                aria-label="Search">
+                            <a class=" my-2 my-sm-0" type="submit"><span class="material-symbols-outlined btn-search">
+                                    search
+                                </span></a>
+                        </form>
+                    </div>
+                    <div id="add_books_form" class="mt-2">
+                        <div
+                            class="d-flex align-items-center justify-content-between position-relative pt-5 pb-3 pr-3 pl-3">
+                            <span class="line_add_books"></span>
+                            <h4 class="text-center">Add Books</h4>
+                            <span class="line_add_books"></span>
+                        </div>
+                        <div class="row pt-2 pb-4 pl-5 pr-4">
+                            <div class="col-sm-8 ml-auto mr-auto">
+                                <form action="" method="post" onsubmit="add_books(event)" name="frm">
+                                    <div class="form-group">
+                                        <label for="Booksname">Book name</label>
+                                        <input type="text" class="form-control " placeholder="Enter book name"
+                                            id="book_name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Author name</label>
+                                        <input type="text" class="form-control" placeholder="Enter author name"
+                                            id="author_name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Publisher Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter publisher name"
+                                            id="publisher_name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Genre</label>
+                                        <input type="text" class="form-control" placeholder="Enter Genre" id="genre">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Number of pages</label>
+                                        <input type="number" class="form-control" placeholder="Enter number of pages"
+                                            id="book_pages">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Price</label>
+                                        <input type="text" class="form-control" placeholder="Enter price"
+                                            id="book_price">
+                                    </div>
+                                    <div class="form-group pt-3">
+                                        <button class="form-control add_books_submit_btn">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2  ">
+                    <div id="calender" class="position-fixed pt-4 pb-4 pl-3 pr-4">
+                        <div class="calender_title d-flex justify-content-between align-items-center">
+                            <h4>Calender</h4>
+                            <div class="notification_icon">
+                                <span class="material-symbols-outlined">
+                                    notifications
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 pt-5 pl-0 pr-0">
+                                <div class="timeline ">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5>Oct 20,2023</h5>
+                                        <div>
+                                            <span class="material-symbols-outlined">
+                                                more_horiz
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="dates_name d-flex  pt-3">
+                                        <h4>10:00pm</h4>
+                                        <span></span>
+                                        <div class="pl-3">
+                                            <h6>Horror, Thriller</h6>
+                                            <p>The Resident Evil</p>
+                                        </div>
+                                    </div>
+                                    <div class="dates_name d-flex  pt-3">
+                                        <h4>12:00pm</h4>
+                                        <span class="border-black"></span>
+                                        <div class="pl-3">
+                                            <h6>Horror, Thriller</h6>
+                                            <p>The Resident Evil</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline pt-5 ">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5>Oct 21,2023</h5>
+                                        <div>
+                                            <span class="material-symbols-outlined">
+                                                more_horiz
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="dates_name d-flex  pt-3">
+                                        <h4>10:00pm</h4>
+                                        <span></span>
+                                        <div class="pl-3">
+                                            <h6>Horror, Thriller</h6>
+                                            <p>The Resident Evil</p>
+                                        </div>
+                                    </div>
+                                    <div class="dates_name d-flex  pt-3">
+                                        <h4>12:00pm</h4>
+                                        <span class="border-black"></span>
+                                        <div class="pl-3">
+                                            <h6>Horror, Thriller</h6>
+                                            <p>The Resident Evil</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function add_books(e) {
+            e.preventDefault();
+            let data = localStorage.getItem("ebook_log_user")
+            if (data != null) {
+                arr = JSON.parse(data)
+            }
+            else {
+                arr = []
+            }
+            console.log(arr);
+            newdata = localStorage.getItem("ebook_userbook_detail")
+            if (newdata != null) {
+                newarr = JSON.parse(newdata)
+            }
+            else {
+                newarr = []
+            }
+            let b_name = document.getElementById("book_name").value
+            let b_author = document.getElementById("author_name").value
+            let b_publisher = document.getElementById("publisher_name").value
+            let b_genre = document.getElementById("genre").value
+            let b_pages = document.getElementById("book_pages").value
+            let b_price = document.getElementById("book_price").value
+
+            newarr.push({ "Name": b_name, "Author": b_author, "Publisher": b_publisher, "Genre": b_genre, "Pages": b_pages, "Price": b_price,"email" : arr[0].email })
+
+            console.log(newarr)
+            localStorage.setItem("ebook_userbook_detail", JSON.stringify(newarr))
+            frm.reset()
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

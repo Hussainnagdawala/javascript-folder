@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To add two numbers in DOM</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-group">
+            <label for=""> Number1 : </label>
+            <input type="text" class="form-control" id="fnum">
+        </div>
+        <div class="form-group">
+            <label for=""> Number2 : </label>
+            <input type="text" class="form-control" id="secnum">
+        </div>
+        <button class="btn btn-info mb-2" onclick="getsum()">Add</button>
+        <div class="form-group">
+            <label for=""> <b>Total: </b></label>
+            <input type="text" class="form-control" id="total">
+        </div>
+    </div>
+
+    <!-- javascript -->
+
+    <script>
+        function getsum() {
+            let firstnum = document.getElementById("fnum").value
+            firstnum = Number.parseInt(firstnum);
+            let secondnum = document.getElementById("secnum").value
+            secondnum = Number.parseInt(secondnum);
+            document.getElementById("total").value = (firstnum + secondnum);
+        }
+    </script>
+</body>
+
+</html>

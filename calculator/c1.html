@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+    html {
+        font-size: 20px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-family: arial;
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    button {
+        border: 0;
+    }
+
+    .input-field {
+        position: relative;
+    }
+
+    .line {
+        width: 60px;
+        background-color: #ffffffc3;
+        border-radius: 50px;
+        padding: 2px;
+        position: absolute;
+        bottom: 10px;
+        left: 165px;
+
+    }
+
+    .calc {
+        width: 400px;
+        border-radius: 50px;
+        border: 3px solid;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        -webkit-box-shadow: 2px 2px 22px -5px rgba(136, 136, 136, 0.47);
+        -moz-box-shadow: 2px 2px 22px -5px rgba(136, 136, 136, 0.47);
+        box-shadow: 2px 2px 22px -5px rgba(136, 136, 136, 0.47);
+    }
+
+    .outline {
+        width: 470px;
+        padding: 0 30px 30px 30px;
+        margin: 0 auto;
+        border-radius: 50px;
+        border: 3px dotted #333;
+        text-align: center;
+    }
+
+    #output {
+        border-radius: 49px 49px 0 0;
+        border: 0;
+        background-color: #333333cd;
+        color: #fff;
+    }
+
+    .content {
+        padding-top: 10px;
+        border-radius: 0 0 50px 50px;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .result {
+        width: 100%;
+        height: 200px;
+    }
+
+    .row {
+        display: flex;
+
+    }
+
+    .br-right {
+        border-radius: 0 0 40px 0;
+    }
+
+    .br-left {
+        border-radius: 0 0 0 40px;
+    }
+
+    .main-btn-stlye {
+        width: 124px !important;
+        height: 59px !important;
+        color: orangered;
+        background-color: white;
+        padding-top: 10px;
+        text-align: center;
+        transition: all 100ms ease-in-out;
+    }
+
+
+    .btn-design {
+        border: 0;
+        padding: 10px 15px;
+        border-radius: 30px;
+        font-size: .9rem;
+        color: #333;
+        transition: all 100ms ease-in-out;
+    }
+
+    .btn-design:hover {
+        border: 0;
+        padding: 10px 15px;
+        border-radius: 30px;
+        font-size: .8rem;
+        background-color: orangered;
+        color: #fff;
+    }
+
+    .btn-design-num {
+        border: 0;
+        padding: 15px 20px;
+        border-radius: 30px;
+        background: none;
+        font-size: 1rem;
+        transition: all 100ms ease-in-out;
+
+    }
+
+    .btn-design-num:hover {
+        border: 0;
+        padding: 12px 17px;
+        border-radius: 30px;
+        background: #333;
+        color: #fff;
+        font-size: 1rem;
+    }
+
+    .btn-stlye-equal {
+        width: 60px;
+        height: 59px;
+        border-radius: 50px;
+        background-color: rgba(255, 68, 0, 0.912);
+        color: #fff;
+        font-size: 1rem;
+        margin: 0 auto;
+        transition: all 100ms ease-in-out;
+    }
+
+    .btn-stlye-equal:hover {
+        background-color: #333;
+    }
+
+    input {
+        font-size: 1.5rem;
+        padding-left: 10px;
+    }
+</style>
+
+<body>
+    <section>
+        <div class="outline">
+            <h1>CALCULATOR</h1>
+            <div class="calc">
+                <div class="input-field">
+                    <input type="text" class="result" id="output">
+                    <div class="line"></div>
+                </div>
+                <div class="content">
+                    <div class="row">
+                        <div class="main-btn-stlye">
+                            <button class="btn-design" onclick="getnum('+')" value="+">+</button>
+                        </div>
+                        <div class="main-btn-stlye"><button class="btn-design" onclick="getnum('-')"
+                                value="-">-</button>
+                        </div>
+                        <div class="main-btn-stlye"><button class="btn-design" onclick="getnum('*')"
+                                value="*">x</button>
+                        </div>
+                        <div class="main-btn-stlye"><button class="btn-design" onclick="getnum('/')"
+                                value="/">/</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="main-btn-stlye"><button class="btn-design-num" onclick="getnum('1')" value="1"
+                                name="num" id="1">1</button></div>
+                        <div class="main-btn-stlye"><button class="btn-design-num" onclick="getnum('2')" value="2"
+                                name="num">2</button></div>
+                        <div class="main-btn-stlye"><button class="btn-design-num" onclick="getnum('3')" value="3"
+                                name="num">3</button></div>
+                        <div class="main-btn-stlye"><button class="btn-design" onclick="getnum('(')"
+                                value="(">(</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="main-btn-stlye"><button class="btn-design-num" onclick="getnum('4')" value="4"
+                                name="num">4</button></div>
+                        <div class="main-btn-stlye"><button class="btn-design-num" onclick="getnum('5')" value="5"
+                                name="num"> 5</button></div>
+                        <div class="main-btn-stlye"><button class="btn-design-num" onclick="getnum('6')" value="6"
+                                name="num">6</button></div>
+                        <div class="main-btn-stlye"><button class="btn-design" onclick="getnum(')')"
+                                value=")">)</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="main-btn-stlye"><button class="btn-design-num" onclick="getnum('7')" value="7"
+                                name="num">7</button></div>
+                        <div class="main-btn-stlye"><button class="btn-design-num" onclick="getnum('8')" value="8"
+                                name="num">8</button></div>
+                        <div class="main-btn-stlye"><button class="btn-design-num" onclick="getnum('9')" value="9"
+                                name="num">9</button></div>
+                        <div class="main-btn-stlye"><button class="btn-design" onclick="getnum('/100*')"
+                                value="/100*">%</button></div>
+                    </div>
+                    <div class="row">
+                        <div class="main-btn-stlye br-left"><button class="btn-design-num" onclick="getnum('.')"
+                                value=".">.</button></div>
+                        <div class="main-btn-stlye"><button class="btn-design-num" onclick="getnum('0')"
+                                value="0">0</button></div>
+                        <div class="main-btn-stlye"><button class="btn-design-num" onclick="responseclear()"
+                                value="">c</button></div>
+                        <div class="main-btn-stlye br-right"><button class="btn-stlye-equal center" onclick="equal()"
+                                value="" id="equal">=</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        function responseclear() {
+            document.getElementById("output").value = ""
+        }
+        
+
+        function getnum(a) {
+            document.getElementById("output").value += a
+        }
+
+        function equal() {
+            let getresponse = document.getElementById("output").value
+            let evaluateresponse = eval(getresponse)
+            document.getElementById("output").value = evaluateresponse
+        }
+
+    </script>
+</body>
+
+</html>

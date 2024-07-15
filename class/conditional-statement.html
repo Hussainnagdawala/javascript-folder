@@ -1,0 +1,41 @@
+<script>
+    /* It control the flow of statement  
+    
+    Decision CS : 
+    if-else 
+    if-else if-else 
+    nested-if 
+
+    looping Control Statement 
+    for loop 
+    while loop 
+    do-while loop 
+  
+    */
+
+
+    let a = prompt("What is your age")
+    // alert(`your age is, ${a}`)
+    a = Number.parseInt(a) //converting string to number
+    console.log(typeof (a))
+
+    if (a < 0) {
+        console.log(`this is a invalid age`)
+    }
+    else if ((a > 0) && (a <= 18)) {
+        console.log(`you are in school`)
+    }
+    else if ((a > 18) && (a <= 25)) {
+        console.log(`you are in graduation or post graduation`)
+    }
+    else {
+        console.log(`you have completed your graduation`)
+    }
+
+    
+    // trnary operator work for only one condition either this or that only one time
+    
+    // (condition) ? "statement1" : "statement2"
+    
+    console.log((a>18) ? "drives" : "can not drive")
+</script>

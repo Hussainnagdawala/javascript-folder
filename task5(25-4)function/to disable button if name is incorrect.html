@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to disable button if name is incorrect</title>
+</head>
+
+<body>
+    Name : <input type="text" name="unm" id="unm">
+    <button onclick="getbtn()">Click</button>
+    <button id="btn">Button</button>
+
+    <script>
+        function getbtn() {
+            let name = document.getElementById("unm").value
+            if (name != "admin") {
+                document.getElementById('btn').disabled = true;
+            }
+            else {
+                document.getElementById("btn").disabled = false;
+                alert("Correct Name")
+            }
+        }
+
+    </script>
+</body>
+
+</html>
